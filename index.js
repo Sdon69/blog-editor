@@ -13,6 +13,8 @@ const scopes = 'read_products,read_themes, write_themes,read_content, write_cont
 const forwardingAddress = "https://65d0a9df.ngrok.io"; // Replace this with your HTTPS Forwarding address
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 
 app.get('/', (req, res) => {
 	
@@ -60,8 +62,8 @@ app.post('/save', function (req, res) {
 })
 
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!');
+app.listen(port, () => {
+  console.log('Example app listening on port' + port);
 });
 
 app.get('/shopify', (req, res) => {
