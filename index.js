@@ -10,7 +10,7 @@ const request = require('request-promise');
 const apiKey = process.env.SHOPIFY_API_KEY;
 const apiSecret = process.env.SHOPIFY_API_SECRET;
 const scopes = 'read_products,read_themes, write_themes,read_content, write_content';
-const forwardingAddress = "https://65d0a9df.ngrok.io"; // Replace this with your HTTPS Forwarding address
+const forwardingAddress = "https://nameless-hollows-55097.herokuapp.com"; // Replace this with your HTTPS Forwarding address
 const fs = require('fs');
 
 const port = process.env.PORT || 3000;
