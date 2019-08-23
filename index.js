@@ -67,7 +67,7 @@ app.listen(port, () => {
 });
 
 app.get('/shopify', (req, res) => {
-	res.write("Loading");
+	
   const shop = req.query.shop;
   if (shop) {
 	  
