@@ -107,7 +107,7 @@ app.get('/shopify', (req, res) => {
   }
 });
 app.get('/shopify/callback', (req, res) => {
-	console.log("ins1");
+	
   const { shop, hmac, code, state } = req.query;
   const stateCookie = cookie.parse(req.headers.cookie).state;
 
@@ -118,7 +118,7 @@ app.get('/shopify/callback', (req, res) => {
   
 
   if (shop && hmac && code) {
-	  console.log("ins2");
+	
     // DONE: Validate request is from Shopify
     const map = Object.assign({}, req.query);
     delete map['signature'];
@@ -320,7 +320,7 @@ app.get('/shopify/callback-request', (req, res) => {
 		  const shopResponseObj = JSON.parse(shopResponseString);
 		 const paymentConfirmationUrl = shopResponseObj.recurring_application_charge.confirmation_url;
 		 
-      
+      console.log(paymentConfirmationUrl);
 	
 			
 			  res.redirect(paymentConfirmationUrl);
