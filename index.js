@@ -33,6 +33,22 @@ app.get('/', (req, res) => {
 	});
 });
 
+app.get('/shopify/default', (req, res) => {
+	
+   fs.readFile('./public/test.html', null, function(error, data)
+	{
+		if(error)
+		{	
+		res.writeHead(404);
+		res.write('File Not Found')
+		}	else
+		{
+			res.write(data);
+		}
+		 res.end('');
+	});
+});
+
 
 app.get('/form2', function (req, res) {
   
@@ -178,7 +194,7 @@ app.get('/shopify/callback', (req, res) => {
 	
 		if(shopResponse.includes("accepted"))
 		{
-			res.redirect(forwardingAddress+"/test");
+			res.redirect(forwardingAddress+"/shopify/default");
 			
 			
 		
