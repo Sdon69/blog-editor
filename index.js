@@ -178,7 +178,7 @@ app.get('/shopify/callback', (req, res) => {
 	
 		if(shopResponse.includes("accepted"))
 		{
-			
+			res.redirect(forwardingAddress);
 			
 			 console.log(appInstalled);
 			fs.readFile('./public/test.html', null, function(error, data)
