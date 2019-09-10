@@ -187,7 +187,7 @@ app.get('/shopify/callback', (req, res) => {
    
 	  request.get(shopRequestUrl3, { headers: shopRequestHeaders })
      .then((shopResponse) => {
-    
+    console.log(shopResponse);
 	appInstalled = "";
 	    shopResponseObj = JSON.parse(shopResponse);
 	
