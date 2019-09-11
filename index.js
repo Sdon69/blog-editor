@@ -194,7 +194,7 @@ app.get('/shopify/callback', (req, res) => {
 	
 		if(shopResponse.includes("accepted"))
 		{
-			res.redirect(forwardingAddress+"/shopify/default");
+			res.redirect(forwardingAddress+"/shopify-redirects?shop="+shop);
 			
 			
 		
